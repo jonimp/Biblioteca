@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+:socio: --> (consultar estado)
+:socio: --> (solicitar prestamo)
+:socio: --> (devolver libro)
+
+:bibliotecario: --> (aprobar prestamo)
+:bibliotecario: --> (aceptar devolucion)
+:bibliotecario: --> (enviar a reparacion)
+
+:administrador: --> (dar alta usuario)
+:administrador: --> (dar baja usuario)
+:administrador: --> (modificar datos usuario)
+:administrador: --> (reparar libro)
+:administrador: --> (agregar libros)
+:administrador: --> (eliminar libros)
+:administrador: --> (modificar libros)
+@enduml
+ 

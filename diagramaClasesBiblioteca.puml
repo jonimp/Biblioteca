@@ -1,0 +1,38 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+
+class Biblioteca {
+}
+
+class Usuario {
+    nombre: String
+    passowrd: Stirng
+}
+
+class Socio {
+}
+
+class Bibliotecario {
+}
+
+class Administrador {
+}
+
+class Libro {
+}
+
+class Ejemplar {
+}
+
+
+Usuario <|- Administrador
+Usuario <|- Bibliotecario
+Usuario <|-- Socio
+
+Biblioteca "1" ..> "0..*" Usuario
+Biblioteca "1" o-- "*" Libro
+Libro "1" o-- "1..*" Ejemplar
+
+@enduml
