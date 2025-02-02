@@ -1,13 +1,16 @@
 @startuml
 left to right direction
+:socio: --> (ver catalogo)
 :socio: --> (consultar estado)
 :socio: --> (solicitar prestamo)
 :socio: --> (devolver libro)
 
+:Bibliotecario: --> (ver catalogo)
 :bibliotecario: --> (aprobar prestamo)
 :bibliotecario: --> (aceptar devolucion)
 :bibliotecario: --> (enviar a reparacion)
 
+:administrador: --> (ver catalogo)
 :administrador: --> (dar alta usuario)
 :administrador: --> (dar baja usuario)
 :administrador: --> (modificar datos usuario)

@@ -4,6 +4,36 @@ skinparam classAttributeIconSize 0
 skinparam linetype ortho
 
 class Biblioteca {
+    -sistema: Sistema
+}
+
+class Catalogo {
+    -ArrayList: libros[] Libro
+    +consultarLibro()
+}
+
+class Libro {
+    -idLibro: Integer
+    -titulo: String
+    -Autor: String
+    -Año: Integer
+    -ArrayList: ejemplares[] Ejemplar
+}
+
+class Ejemplar {
+    -idEjemplar: Integer
+    -obra: Libro
+    -estado: String
+}
+
+class Sistema {
+    -datos: BaseDatos
+    -catalogoLibros: Catalogo
+    +iniciar()
+}
+
+class BaseDatos {
+    -ArrayList: usuarios[] Usuario
 }
 
 class Usuario {
@@ -12,27 +42,40 @@ class Usuario {
 }
 
 class Socio {
+    +consultarEstado()
+    +leerCatalogo()
+    +solicitarPrestamo()
+    +devolverLibro()
 }
 
 class Bibliotecario {
+    +verCatalogo()
+    +aprobarPrestamo()
+    +aceptarDevolucion()
+    +enviarAReparacion()
 }
 
 class Administrador {
+    +verCatalogo()
+    +darAltaUsuario()
+    +darBajaUsuario()
+    +modificarDatosUsuario()
+    +repararLibro()
+    +agregarLibros()
+    +eliminarLibros()
+    +modificarLibros()
 }
 
-class Libro {
-}
 
-class Ejemplar {
-}
-
-
-Usuario <|- Administrador
-Usuario <|- Bibliotecario
+Biblioteca "1" -> "1" Sistema
+Catalogo "1" o- "*" Libro
+Libro "1" *-- "*" Ejemplar
+Sistema "1" --> "1" BaseDatos
+Sistema "1" -> "Catalogo"
+BaseDatos "1" o-- "*" Usuario
 Usuario <|-- Socio
+Usuario <|-- Bibliotecario
+Usuario <|-- Administrador
 
-Biblioteca "1" ..> "0..*" Usuario
-Biblioteca "1" o-- "*" Libro
-Libro "1" o-- "1..*" Ejemplar
 
 @enduml
