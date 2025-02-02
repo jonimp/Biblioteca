@@ -9,7 +9,7 @@ class Biblioteca {
 
 class Catalogo {
     -ArrayList: libros[] Libro
-    +consultarLibro()
+    +verCatalogoLibros()
 }
 
 class Libro {
@@ -38,12 +38,12 @@ class BaseDatos {
 
 class Usuario {
     nombre: String
-    passowrd: Stirng
+    password: String
 }
 
 class Socio {
     +consultarEstado()
-    +leerCatalogo()
+    +verCatalogo()
     +solicitarPrestamo()
     +devolverLibro()
 }
@@ -61,17 +61,17 @@ class Administrador {
     +darBajaUsuario()
     +modificarDatosUsuario()
     +repararLibro()
-    +agregarLibros()
-    +eliminarLibros()
-    +modificarLibros()
+    +agregarLibro()
+    +eliminarLibro()
+    +modificarLibro()
 }
 
 
 Biblioteca "1" -> "1" Sistema
 Catalogo "1" o- "*" Libro
 Libro "1" *-- "*" Ejemplar
-Sistema "1" --> "1" BaseDatos
-Sistema "1" -> "Catalogo"
+Sistema "1" o-- "1" BaseDatos
+Sistema "1" o- "1" Catalogo
 BaseDatos "1" o-- "*" Usuario
 Usuario <|-- Socio
 Usuario <|-- Bibliotecario
