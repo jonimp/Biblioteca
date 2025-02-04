@@ -3,16 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Ejemplar.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/BaseDatos.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Usuario.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Administrador.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Sistema.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Socio.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Libro.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Bibliotecario.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Biblioteca.java</file>
-            <file>file:/home/oem/Escritorio/biblioteca/src/biblioteca/Catalogo.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/BaseDatos.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/Libro.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/Biblioteca.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/Ejemplar.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/Sistema.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/Usuario.java</file>
+            <file>file:/home/jonatan/Escritorio/Biblioteca/biblioteca/src/biblioteca/Catalogo.java</file>
         </group>
     </open-files>
 </project-private>

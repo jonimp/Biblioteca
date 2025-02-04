@@ -8,7 +8,7 @@ public class Ejemplar {
     public Ejemplar (int idEjemplar, Libro obra, String estado){
         this.idEjemplar = idEjemplar;
         this.obra = obra;
-        this.estado = estado;
+        this.estado = "Disponible";
     }
 
     public void setEstado(String estado) {
