@@ -3,6 +3,7 @@ package biblioteca;
 import java.io.IOException;
 
 public class Sistema {
+<<<<<<< HEAD
        
     public void iniciar(){
         BaseDatos datos = new BaseDatos();
@@ -46,6 +47,15 @@ public class Sistema {
                 seguir = us.proceder(guarderia);
             }
         }  
+=======
+    
+    public Sistema(){
+        BaseDatos datos = new BaseDatos();
+        catalogoLibros = new Catalogo();
+    }
+    
+    public void iniciar(){
+>>>>>>> b492250 (Avance de funciones)
         
     }
 }
