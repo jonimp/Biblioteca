@@ -1,4 +1,4 @@
-package guarderia;
+package biblioteca;
 
 import java.util.Scanner;
 

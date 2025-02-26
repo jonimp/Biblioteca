@@ -23,7 +23,7 @@ class Libro {
 class Ejemplar {
     -idEjemplar: Integer
     -obra: Libro
-    -estado: String
+    +estaDiponible()
 }
 
 class Sistema {
@@ -34,6 +34,7 @@ class Sistema {
 
 class BaseDatos {
     -ArrayList: usuarios[] Usuario
+    -ArrayList: prestamos[] Prestamo
 }
 
 class Usuario {
@@ -42,6 +43,8 @@ class Usuario {
 }
 
 class Socio {
+    -ArrayList: prestamos[] Prestamo
+    +puedeRealizarPrestamo()
     +consultarEstado()
     +verCatalogo()
     +solicitarPrestamo()
@@ -66,7 +69,20 @@ class Administrador {
     +modificarLibro()
 }
 
+class Prestamo {
+    -Integer idPrestamo;
+    -Socio socio;
+    -Ejemplar ejemplar;
+    -LocalDate fechaPrestamo;
+    -LocalDate fechaDevolucionPrevista;
+    -LocalDate fechaDevolucionReal;
+    -String estado;
+    +public boolean estaVencido()
+}
 
+Prestamo "*" -- "1" Socio
+Prestamo "*" -- "1" Ejemplar
+BaseDatos "1" o-- "*" Prestamo
 Biblioteca "1" -> "1" Sistema
 Catalogo "1" o- "*" Libro
 Libro "1" *-- "*" Ejemplar
